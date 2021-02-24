@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import { Router } from 'express';
-import todoRouter from './todo/todo.routes.js';
+import todoRouter from './todo.routes.js';
 
 const indexRouter = Router();
 

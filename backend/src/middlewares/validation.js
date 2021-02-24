@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import Joi from 'joi';
-import handleErrorsUtil from '../../utils/error.util.js';
+import handleErrorsUtil from '../utils/error.util.js';
 
 // eslint-disable-next-line import/prefer-default-export
 export const validateListBody = (req, res, next) => {

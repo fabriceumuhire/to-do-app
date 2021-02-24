@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import list from '../model/list.model.js';
+import list from '../models/list.model.js';
 
 /*
  * Service maintain class

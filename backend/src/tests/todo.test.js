@@ -2,10 +2,10 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import status from 'http-status';
-import app from '../../app.js';
-import { list } from '../../utils/fixtures/list.fixture.js';
+import app from '../app.js';
+import { list } from '../utils/fixtures/list.fixture.js';
 
-const { BAD_REQUEST, CREATED } = status;
+const { BAD_REQUEST, CREATED, OK } = status;
 
 chai.should();
 chai.use(chaiHttp);
@@ -47,6 +47,21 @@ describe('/POST user creates a todo', () => {
         res.status.should.equal(BAD_REQUEST);
         res.body.should.have.property('message');
         res.body.message.should.be.an('array');
+        done();
+      });
+  });
+
+  it('Should get all todos', (done) => {
+    chai
+      .request(app)
+      .get('/api/v1/list')
+      .end((err, res) => {
+        res.body.should.be.an('object');
+        res.body.should.have.property('status');
+        res.status.should.equal(OK);
+        res.body.should.have.property('message');
+        res.body.should.have.property('data');
+        res.body.data.should.be.an('array');
         done();
       });
   });

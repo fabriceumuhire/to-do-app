@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import status from 'http-status';
-import ListMaintain from '../../maintain/list.maintain.js';
-import ResponseUtil from '../../utils/response.util.js';
+import ListMaintain from './list.maintain.js';
+import ResponseUtil from '../utils/response.util.js';
 
 const {
   CREATED,

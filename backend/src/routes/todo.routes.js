@@ -3,8 +3,8 @@ import { Router } from 'express';
 import {
   validateListBody,
   validateUpdateListBody,
-} from './validation.js';
-import ListController from './controller.js';
+} from '../middlewares/validation.js';
+import ListController from '../controllers/controller.js';
 
 const {
   createTodo,
